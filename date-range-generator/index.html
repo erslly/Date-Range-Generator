@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ersllydev</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tarih Aralığı Üretici</h1>
+        <form id="dateRangeForm">
+            <label for="startDate">Başlangıç Tarihi:</label>
+            <input type="date" id="startDate" required>
+            
+            <label for="endDate">Bitiş Tarihi:</label>
+            <input type="date" id="endDate" required>
+            
+            <label for="interval">Aralık:</label>
+            <select id="interval" required>
+                <option value="daily">Günlük</option>
+                <option value="weekly">Haftalık</option>
+                <option value="monthly">Aylık</option>
+                <option value="yearly">Yıllık</option>
+            </select>
+            
+            <button type="submit">Tarihleri Oluştur</button>
+        </form>
+        <div id="loading" class="loading" style="display: none;">Yükleniyor...</div>
+        <div id="result" class="result"></div>
+        <div id="totalDays" class="total-days"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
